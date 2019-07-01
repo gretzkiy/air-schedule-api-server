@@ -1,0 +1,13 @@
+{
+    "name": "airschedule-backend",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "server": "node server/server.js"
+    },
+    "author": "Andrey Dikarev",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.16.4"
+    }
+}
