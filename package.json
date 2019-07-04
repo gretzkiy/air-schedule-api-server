@@ -3,11 +3,20 @@
     "version": "1.0.0",
     "description": "",
     "scripts": {
-        "server": "node server/server.js"
+        "server": "node server.js",
+        "dev_server": "nodemon server.js",
+        "lint": "./node_modules/.bin/eslint ."
     },
     "author": "Andrey Dikarev",
     "license": "ISC",
     "dependencies": {
+        "axios": "^0.19.0",
         "express": "^4.16.4"
+    },
+    "devDependencies": {
+        "nodemon": "^1.19.1",
+        "eslint": "^6.0.1",
+        "eslint-plugin-import": "^2.18.0",
+        "eslint-config-airbnb-base": "^13.1.0"
     }
 }
