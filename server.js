@@ -2,18 +2,14 @@ const express = require('express');
 const axios = require('axios');
 const logger = require('./modules/logger');
 
-const { API_TOKEN } = process.env;
 const PORT = process.env.PORT || 4000;
+const { API_TOKEN } = process.env;
+if (!API_TOKEN) {
+    console.log('API_TOKEN must be specified.');
+    process.exit(1);
+}
 
 const app = express();
-
-// const allowCORS = (_, response, next) => {
-//     response.header('Access-Control-Allow-Origin', '*');
-//     response.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-//     next();
-// };
-
-// app.use('/api', allowCORS);
 
 const acceptedSchheduleEvents = [
     'departure',
